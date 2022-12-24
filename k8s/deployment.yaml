@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: abc
+  name: jokteto
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: abc
+      app: jokteto
   template:
     metadata:
       labels:
-        app: abc
+        app: jokteto
     spec:
       containers:
-      - image: okteto.dev/abc:latest
-        name: abc
+      - image: okteto.dev/jokteto:latest
+        name: jokteto
         ports:
         - containerPort: 8080
         env:
